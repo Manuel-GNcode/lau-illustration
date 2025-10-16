@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lau-illustration</title>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <main class="font-playwrite">
+      <section class="absolute left-0 top-0 z-50 w-dvw h-dvh overflow-hidden" id="home">
+        <img class="absolute z-10 w-full h-full object-center object-cover" id="home-background"
+          src="/public/home/home-background.webp" alt="background" />
+
+        <div id="home-data" class="absolute z-20 w-180 bottom-0 left-1/2 -translate-x-1/2 overflow-hidden sm:w-220 lg:w-250">
+          <figure id="home-avatar" class="w-[400%]">
+            <img class="w-full block" src="/public/home/home-avatar.webp" alt="Avatar del home" />
+          </figure>
+          <button id="home-btn" class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-[#ffffff77] p-3 pl-5 pr-5 rounded-4xl text-rouse text-2xl flex items-center sm:text-3xl lg:cursor-pointer lg:text-4xl lg:bottom-16">
+            <span class="inline-block rounded-full size-4 bg-rouse mr-4"></span>
+            Click to Start
+            <span class="inline-block rounded-full size-4 bg-rouse ml-4"></span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

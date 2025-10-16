@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'playwrite';
+  src: url('/fuente/PlaywriteDEGrund-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  /* fuente */
+  --font-playwrite: "playwrite", sans-serif;
+
+  /* Paleta de colores */
+  --color-rouse: #d797aa;
+  --color-violet: #d8b3cf;
+  --color-lightviole: #e9dbe9;
+  --color-white: #fff;
+}
