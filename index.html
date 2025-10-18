@@ -9,6 +9,7 @@
   </head>
   <body>
     <main class="font-playwrite">
+      <!-- Home -->
       <section class="hidden absolute left-0 top-0 z-50 w-dvw h-dvh overflow-hidden" id="home">
         <img class="absolute z-10 w-full h-full object-center object-cover" id="home-background"
           src="/public/home/home-background.webp" alt="background" />
@@ -25,6 +26,7 @@
         </div>
       </section>
 
+      <!-- Work -->
       <section id="work" class="w-dvw h-dvh relative flex flex-col overflow-hidden">
         <div class="w-full h-3/4 relative">
           <img src="/public/work/works-background.webp" alt="work bg" class="size-full object-cover absolute top-0 left-0">
@@ -34,21 +36,37 @@
             <p class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-[#ffffffdd] text-nowrap py-4 px-6 rounded-full text-rouse font-bold border-4 border-rouse">Select a food you want to try</p>
             <p class="absolute bottom-20 left-1/2 -translate-x-1/2 bg-rouse text-white px-6 rounded-t-2xl py-1 font-bold text-sm">Welcome</p>
           </div>
+
+          <article id="work-current-img" class="absolute size-full bg-[#00000044] backdrop-blur-[2px] items-center justify-center hidden"></article>
         </div>
 
         <div class="w-full h-1/4 relative">
           <img src="/public/work/works-tableFront.webp" alt="work-table" class="absolute object-cover size-full left-0 top-0" />
-          <div class="absolute flex gap-8 left-1/2 top-1/2 -translate-1/2 border-2">
-            <button id="work-arrow-left">Izquierda</button>
-            <div>
-              carrusel
+          <div class="absolute flex justify-between left-1/2 top-1/2 -translate-1/2 w-80 h-25">
+            <button id="work-arrow-left" class="cursor-pointer">
+              <img src="/public/work/works-arrow.webp" alt="Left arrow" class="size-full object-contain">
+            </button>
+
+            <div class="h-full w-30 overflow-hidden">
+              <div id="work-slider-ctr" class="h-full w-6/1 flex">
+                <div data-illustration="0" class="btn-img size-full bg-violet-900"></div>
+                <div data-illustration="1" class="btn-img size-full bg-amber-200"></div>
+                <div data-illustration="2" class="btn-img size-full bg-blue-600"></div>
+                <div data-illustration="3" class="btn-img size-full bg-red-300"></div>
+                <div data-illustration="4" class="btn-img size-full bg-violet-900"></div>
+                <div data-illustration="5" class="btn-img size-full bg-green-900"></div>
+              </div>
             </div>
-            <button id="work-arrow-right">Derecha</button>
+
+            <button id="work-arrow-right" class="cursor-pointer">
+              <img src="/public/work/works-arrow.webp" alt="right arrow" class="-scale-x-100 size-full object-contain"/>
+            </button>
           </div>
         </div>
       </section>
     </main>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/home/animationHome.js"></script>
+    <script type="module" src="/src/work/sliderWork.js"></script>
   </body>
 </html>
