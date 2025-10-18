@@ -9,7 +9,7 @@
   </head>
   <body>
     <main class="font-playwrite">
-      <section class="absolute left-0 top-0 z-50 w-dvw h-dvh overflow-hidden" id="home">
+      <section class="hidden absolute left-0 top-0 z-50 w-dvw h-dvh overflow-hidden" id="home">
         <img class="absolute z-10 w-full h-full object-center object-cover" id="home-background"
           src="/public/home/home-background.webp" alt="background" />
 
@@ -22,6 +22,29 @@
             Click to Start
             <span class="inline-block rounded-full size-4 bg-rouse ml-4"></span>
           </button>
+        </div>
+      </section>
+
+      <section id="work" class="w-dvw h-dvh relative flex flex-col overflow-hidden">
+        <div class="w-full h-3/4 relative">
+          <img src="/public/work/works-background.webp" alt="work bg" class="size-full object-cover absolute top-0 left-0">
+          <img src="/public/work/works-fridge.webp" alt="work fridge" class="absolute -bottom-1/5 -left-1/3 w-70">
+          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-70">
+            <img src="/public/work/works-avatar.webp" alt="work avatar" class="w-full">
+            <p class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-[#ffffffdd] text-nowrap py-4 px-6 rounded-full text-rouse font-bold border-4 border-rouse">Select a food you want to try</p>
+            <p class="absolute bottom-20 left-1/2 -translate-x-1/2 bg-rouse text-white px-6 rounded-t-2xl py-1 font-bold text-sm">Welcome</p>
+          </div>
+        </div>
+
+        <div class="w-full h-1/4 relative">
+          <img src="/public/work/works-tableFront.webp" alt="work-table" class="absolute object-cover size-full left-0 top-0" />
+          <div class="absolute flex gap-8 left-1/2 top-1/2 -translate-1/2 border-2">
+            <button id="work-arrow-left">Izquierda</button>
+            <div>
+              carrusel
+            </div>
+            <button id="work-arrow-right">Derecha</button>
+          </div>
         </div>
       </section>
     </main>
