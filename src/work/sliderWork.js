@@ -1,21 +1,44 @@
 import { gsap } from "gsap";
-import { images } from "./sources";
+import { images, food } from "./sources";
 
 const $btnLeft = document.getElementById('work-arrow-left');
 const $btnRight = document.getElementById('work-arrow-right');
-const $sliderCtr = document.getElementById('work-slider-ctr');
-const $btnsImg = document.querySelectorAll('.btn-img');
 const $currentImg = document.getElementById('work-current-img');
+const $slider = document.getElementById('work-slider');
 
 let currentSlide = 0;
 let isAnimating = false;
 
-const stepSlide = 100/6;
-
+const numberImg = images.length;
+const stepSlide = 100/numberImg;
 let currentImg = 0;
 
+const renderSlider = ()=>{
+  let sliderItems = '';
+  for (let index = 0; index < food.length; index++) {
+    const element = food[index];
+    const item = `
+    <button data-illustration="${index}" class="btn-img py-1 px-2 size-full cursor-pointer hover:scale-[1.1]">
+      <img src="${element.url}" alt="${element.name}" class="size-full object-contain pointer-events-none"/>
+    </button>
+    `
+    sliderItems += item;
+  }
+
+  $slider.innerHTML = `
+  <div id="work-slider-ctr" class="h-full w-${numberImg}/1 flex">
+    ${sliderItems}
+  </div>
+  `
+}
+renderSlider();
+const $sliderCtr = document.getElementById('work-slider-ctr');
+const $btnsImg = document.querySelectorAll('.btn-img');
+
 const moveSlider = async (nextSlide) => {
-  if (nextSlide < 0 || nextSlide > 5) return;
+  if (nextSlide == 0) $btnLeft.classList.add('btn-off');
+  else if (nextSlide == food.length-1) $btnRight.classList.add('btn-off');
+
   if (isAnimating) return;
   isAnimating = true;
 
@@ -46,9 +69,11 @@ const renderImg = (newImg)=>{
 };
 
 $btnLeft.addEventListener('click', ()=>{
+  $btnRight.classList.remove('btn-off');
   moveSlider(currentSlide - 1);
 });
 $btnRight.addEventListener('click', ()=>{
+  $btnLeft.classList.remove('btn-off');
   moveSlider(currentSlide + 1);
 })
 $btnsImg.forEach(item=>{

@@ -7,6 +7,12 @@
   font-style: normal;
 }
 
+.btn-off {
+  opacity: 0.8;
+  filter: brightness(0.9);
+  pointer-events: none;
+}
+
 @theme {
   /* fuente */
   --font-playwrite: "playwrite", sans-serif;
