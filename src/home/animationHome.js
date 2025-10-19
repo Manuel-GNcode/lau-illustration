@@ -18,10 +18,10 @@ gsap.to('#home-btn', {
   ease: 'sine.inOut'
 })
 // Animación de todo el home
-let tlHome = gsap.timeline({
+export let tlHome = gsap.timeline({
   paused: true,
   defaults: {
-    ease: 'power3.inOut',
+    ease: 'sine.out',
   }
 })
 tlHome.to('#home-btn', {
@@ -31,9 +31,9 @@ tlHome.to('#home-btn', {
   y: '100%',
   duration: 0.5,
 }).to('#home-background', {
-  scale: 4,
-  duration: 1,
-}).to('#home', {
+  scale: 3,
+  duration: 0.8,
+}).set('#home', {
   display: 'none'
 })
 

@@ -10,7 +10,7 @@
   <body>
     <main class="font-playwrite">
       <!-- Home -->
-      <section class="hidden absolute left-0 top-0 z-50 w-dvw h-dvh overflow-hidden" id="home">
+      <section class="hidden absolute left-0 top-0 z-50 w-dvw h-dvh overflow-hidden backdrop-blur-sm bg-[#00000067]" id="home">
         <img class="absolute z-10 w-full h-full object-center object-cover" id="home-background"
           src="/public/home/home-background.webp" alt="background" />
 
@@ -28,10 +28,16 @@
 
       <!-- Work -->
       <section id="work" class="w-dvw h-dvh relative flex flex-col overflow-hidden">
+        <button id="work-btn-home" class="absolute z-30 left-0 top-0 bg-rouse text-2xl text-white font-bold pt-2 pb-4 rounded-br-[32px] border-b-4 border-white cursor-pointer w-32 sm:w-40 sm:text-3xl lg:hover:text-rouse lg:hover:bg-white lg:hover:border-rouse">Home</button>
+        <button id="work-btn-home" class="absolute z-30 right-0 top-0 bg-rouse text-2xl text-white font-bold pt-2 pb-4 rounded-bl-[32px] border-b-4 border-white cursor-pointer w-32 sm:w-40 sm:text-3xl lg:hover:text-rouse lg:hover:bg-white lg:hover:border-rouse">Contact</button>
         <div class="w-full h-3/4 relative">
-          <img src="/public/work/works-background.webp" alt="work bg" class="size-full object-cover absolute top-0 left-0">
-          <img src="/public/work/works-fridge.webp" alt="work fridge" class="absolute -bottom-1/5 -left-1/3 w-70">
-          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-70">
+          <img src="/public/work/works-background.webp" alt="work bg" class="size-full object-cover object-left-top absolute top-0 left-0 brightness-90">
+          <img src="/public/work/works-fridge.webp" alt="work fridge" class="absolute -bottom-1/5 -left-1/3 w-70 sm:-left-1/6 md:-left-1/10 lg:left-10 xl:left-30 brightness-98">
+          <div class="absolute -right-1/3 -bottom-8 hidden sm:flex flex-col items-start h-60 -mb-2 md:-right-1/5 lg:-right-2 lg:h-70 xl:h-80 xl:-bottom-18">
+            <img class="h-2/4 object-contain pl-18 brightness-98" src="/public/work/works-kofi.webp" alt="Ko-fi">
+            <img class="h-2/4 object-contain brightness-90" src="/public/work/works-tableBack.webp" alt="Table">
+          </div>
+          <div class="absolute -bottom-2 right-1/2 translate-x-1/2 w-70 lg:right-10 lg:translate-x-0 lg:z-10 lg:w-80 xl:right-30">
             <img src="/public/work/works-avatar.webp" alt="work avatar" class="w-full">
             <p class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-[#ffffffdd] text-nowrap py-4 px-6 rounded-full text-rouse font-bold border-4 border-rouse">Select a food you want to try</p>
             <p class="absolute bottom-20 left-1/2 -translate-x-1/2 bg-rouse text-white px-6 rounded-t-2xl py-1 font-bold text-sm">Welcome</p>
@@ -40,14 +46,14 @@
           <article id="work-current-img" class="absolute size-full bg-[#00000044] backdrop-blur-[2px] items-center justify-center hidden"></article>
         </div>
 
-        <div class="w-full h-1/4 relative">
-          <img src="/public/work/works-tableFront.webp" alt="work-table" class="absolute object-cover size-full left-0 top-0" />
-          <div class="absolute flex justify-between left-1/2 top-1/2 -translate-1/2 w-80 h-25">
+        <div class="w-full h-1/4 relative z-20">
+          <img src="/public/work/works-tableFront.webp" alt="work-table" class="absolute object-cover object-left-top size-full left-0 top-0" />
+          <div class="absolute flex justify-between left-1/2 top-1/2 -translate-1/2 w-80 h-25 sm:w-140 sm:h-30 lg:w-210">
             <button id="work-arrow-left" class="cursor-pointer py-3 btn-off">
               <img src="/public/work/works-arrow.webp" alt="Left arrow" class="size-full object-contain">
             </button>
 
-            <div id="work-slider" class="h-full w-45 overflow-hidden"></div>
+            <div id="work-slider" class="h-full w-45 overflow-hidden rounded-4xl sm:w-90 lg:w-150"></div>
 
             <button id="work-arrow-right" class="cursor-pointer py-3">
               <img src="/public/work/works-arrow.webp" alt="right arrow" class="-scale-x-100 size-full object-contain"/>
