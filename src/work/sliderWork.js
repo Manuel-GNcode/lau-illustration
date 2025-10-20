@@ -7,6 +7,8 @@ const $btnRight = document.getElementById('work-arrow-right');
 const $currentImg = document.getElementById('work-current-img');
 const $slider = document.getElementById('work-slider');
 const $btnHome = document.getElementById('work-btn-home');
+const $btnContact = document.getElementById('work-btn-contact');
+const $mainCtr = document.getElementById('main-ctr');
 
 let $sliderCtr = '';
 let $btnsImg = '';
@@ -123,6 +125,13 @@ $btnRight.addEventListener('click', ()=>{
 })
 $btnHome.addEventListener('click', (e)=>{
   tlHome.reverse();
+})
+$btnContact.addEventListener('click', ()=>{
+  gsap.to($mainCtr, {
+    xPercent: -50,
+    duration: 0.5,
+    ease: 'sine.out'
+  })
 })
 
 gsap.to($btnLeft, {
