@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/cute-favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lau-illustration</title>
     <link rel="stylesheet" href="/src/style.css">
@@ -11,8 +11,19 @@
     <main class="font-playwrite w-dvw h-dvh relative overflow-hidden">
       <!-- Home -->
       <section class="absolute left-0 top-0 z-50 size-full overflow-hidden backdrop-blur-sm bg-[#00000067]" id="home">
-        <img class="absolute z-10 w-full h-full object-center object-cover" id="home-background"
-          src="/public/home/home-background.webp" alt="background" />
+        <img class="absolute z-10 w-full h-full object-center object-cover" id="home-background" src="/public/home/home-background.webp" alt="background" />
+        <div class="hidden absolute w-full left-0 top-0 -translate-y-1/1 z-15 sm:flex sm:justify-evenly">
+          <img class="flower-fall size-10" src="/public/cute-flor.png" alt="Flower">
+          <img class="flower-fall size-10" src="/public/cute-flor.png" alt="Flower">
+          <img class="flower-fall size-10" src="/public/cute-flor.png" alt="Flower">
+          <img class="flower-fall size-10" src="/public/cute-flor.png" alt="Flower">
+          <img class="flower-fall size-10" src="/public/cute-flor.png" alt="Flower">
+          <img class="hidden flower-fall size-10 lg:block" src="/public/cute-flor.png" alt="Flower">
+          <img class="hidden flower-fall size-10 lg:block" src="/public/cute-flor.png" alt="Flower">
+          <img class="hidden flower-fall size-10 lg:block" src="/public/cute-flor.png" alt="Flower">
+          <img class="hidden flower-fall size-10 lg:block" src="/public/cute-flor.png" alt="Flower">
+          <img class="hidden flower-fall size-10 lg:block" src="/public/cute-flor.png" alt="Flower">
+        </div>
 
         <div id="home-data" class="absolute z-20 w-180 bottom-0 left-1/2 -translate-x-1/2 overflow-hidden sm:w-220 lg:w-250">
           <figure id="home-avatar" class="w-[400%]">
@@ -85,7 +96,7 @@
                     <img src="/public/contact/contact-comission.webp" alt="Logo Comission">
                   </label>
                 </div>
-                <label class="flex gap-2">
+                <label class="flex gap-2 mb-2">
                   <p>Name:</p>
                   <input required class="border-b-2 border-violet rounded-tr-xl outline-0 w-full focus:bg-white" type="text" name="Name">
                 </label>

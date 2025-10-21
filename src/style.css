@@ -6,7 +6,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+body {
+  cursor: url("/public/cursor-neutral.png") 16 16, auto;
+}
+a, button, input, label, textarea {
+  cursor: url("/public/cursor-select.png") 16 16, pointer;
+}
 .btn-off {
   opacity: 0.8;
   filter: brightness(0.7);
